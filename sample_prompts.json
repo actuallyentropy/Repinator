@@ -1,0 +1,25 @@
+{
+    "samples": {
+        "_meta_": {
+            "next_prompt": "p_sample_1"
+        },
+        "p_sample_1": {
+            "prompt": "This is how [hint] are defined",
+            "answer": "you respond with this",
+            "hint": "[prompts]",
+            "next_prompt": "p_sample_2"
+        },
+        "p_sample_2": {
+            "prompt": "Prompts are chained together with the [hint] field",
+            "answer": "next_prompt",
+            "hint": "[next_prompt]",
+            "next_prompt": "sample_multilang"
+        },
+        "sample_multilang": {
+            "prompt": "他の[hint]もあれます",
+            "answer": "言語",
+            "hint": "[languages]",
+            "translated_prompt": "There can be other languages, too"
+        }
+    }
+}

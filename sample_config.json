@@ -1,0 +1,10 @@
+{
+	"token": "your.token.here",
+    "clientId": "your.clientid.here",
+	"promptMatcher": "[hint]",
+	"ReviewsRightTillSync": 1,
+	"checkRemindersFrequency": 300000,
+	"reviewDbName": "reviewsDB",
+	"reviewDbUser": "add_a_db_username",
+	"reviewDbPass": "add_a_db_pass"
+}
