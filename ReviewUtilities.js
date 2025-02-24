@@ -95,6 +95,17 @@ module.exports = {
 
     getReviewAnswer(review, deck) {
         var prompt = reviewDecks[deck][review.index];
+        if(prompt.answer.length == 0) {
+            return "";
+        }
         return prompt.answer[0];
+    },
+
+    getLessonText(review, deck) {
+        var prompt = reviewDecks[deck][review.index];
+        if(typeof(prompt.lesson_text) == "undefined") {
+            return "";
+        }
+        return prompt.lesson_text;
     }
 }

@@ -32,6 +32,10 @@ class ReviewContext {
         return ReviewUtilities.getReviewAnswer(this.reviewQueue[this.reviewIndex], this.deck);
     }
 
+    get currentLessonText() {
+        return ReviewUtilities.getLessonText(this.reviewQueue[this.reviewIndex], this.deck);
+    }
+
     getCurrentReviewMessage({isCorrection = false, currReview}) {
         var ans = ``;
         
@@ -59,6 +63,10 @@ class ReviewContext {
         }
         if(this.isLesson) {
             ans += `\n(answer: ${this.currentReviewAnswer})\n(use /guess with the answer to complete!)`;
+            var ltxt = this.currentLessonText;
+            if(ltxt != "") {
+                ans += `\n\n${ltxt}`
+            }
         }
 
         return ans;
