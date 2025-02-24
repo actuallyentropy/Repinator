@@ -25,6 +25,10 @@ class ReviewContextManager {
         }
     }
 
+    static async safeShutdown() {
+        await ReviewSequelizer.shutdown();
+    }
+
     static async getActiveDeckOrPrompt(interaction) {
         if(!(interaction.user.id in this.userActiveDecks)) {
             interaction.reply("No active deck set, do /setdeck to choose a deck to study \n (you only have to do this once unless you want to change decks later!)");

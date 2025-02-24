@@ -56,3 +56,7 @@ client.once(Events.ClientReady, c => {
 
 // Log in to Discord with your client's token
 client.login(token);
+
+process.on('exit', function() {
+	ReviewContextManager.safeShutdown();
+});

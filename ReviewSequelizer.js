@@ -105,6 +105,10 @@ class ReviewSequelizer {
             }
         }
     }
+
+    static async shutdown() {
+        this.sequelize.close();
+    }
 }
 
 module.exports = ReviewSequelizer;
