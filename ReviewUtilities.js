@@ -90,7 +90,7 @@ module.exports = {
 
     isGuessCorrect(review, deck, guess) {
         var prompt = reviewDecks[deck][review.index];
-        return prompt.answer.includes(guess);
+        return prompt.answer.some(str => str.toLowerCase() == guess.toLowerCase());
     },
 
     getReviewAnswer(review, deck) {
